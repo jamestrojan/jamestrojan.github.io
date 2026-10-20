@@ -1,0 +1,29 @@
+title: Siwoo Han의 코딩 노트
+author: Siwoo Han
+description: C를 막 배우기 시작했다. 헷갈린 건 다음에 다시 찾을 수 있게 적어 둔다.
+lang: ko-KR
+timezone: Asia/Shanghai
+url: https://blog.ultramax.pro
+baseurl: ''
+
+theme: minima
+
+minima:
+  date_format: "%Y년 %-m월 %-d일"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /posts/:title/
+excerpt_separator: '<!-- more -->'
+show_excerpts: true
+
+exclude:
+  - README.md
+
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post

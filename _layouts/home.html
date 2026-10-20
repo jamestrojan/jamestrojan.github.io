@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="home">
+  {{ content }}
+
+  <h1 class="post-list-heading">학습 기록</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <time class="post-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.minima.date_format }}</time>
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+      {% if site.show_excerpts %}
+        {{ post.excerpt }}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe"><a href="{{ '/feed.xml' | relative_url }}">RSS로 새 글 구독하기</a></p>
+</div>
